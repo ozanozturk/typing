@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformKey: 106
-  platformType: 1
+  platformType: 2
 --- !u!114 &114998084325785102
 MonoBehaviour:
   m_ObjectHideFlags: 1
