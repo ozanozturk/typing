@@ -9,6 +9,7 @@ TagManager:
   - Collectible
   - Booster
   - Checkpoint
+  - Inverter
   layers:
   - Default
   - TransparentFX

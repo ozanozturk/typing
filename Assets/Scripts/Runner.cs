@@ -56,19 +56,19 @@ public class Runner : MonoBehaviour
 
         if (Input.GetKeyDown(backwardButton))
         {
-            direction *= -1;
+            InvertDirection();
         }
         if (Input.GetKeyUp(backwardButton))
         {
-            direction *= -1;
+            InvertDirection();
         }
         if (Input.GetKeyDown(backwardButton2))
         {
-            direction *= -1;
+            InvertDirection();
         }
         if (Input.GetKeyUp(backwardButton2))
         {
-            direction *= -1;
+            InvertDirection();
         }
 
         controller.Move((direction * movementSpeed + Vector3.up * verticalSpeed) * Time.deltaTime);
@@ -98,6 +98,22 @@ public class Runner : MonoBehaviour
         {
             verticalSpeed = boostVertical;
             controller.Move((direction * boostHorizontal + Vector3.up * verticalSpeed) * Time.deltaTime);
+        }
+        if (other.tag == "Inverter")
+        {
+            InvertDirection();
+        }
+    }
+
+    private void InvertDirection()
+    {
+        if (direction == Vector3.right)
+        {
+            direction = Vector3.left;
+        }
+        else if (direction == Vector3.left)
+        {
+            direction = Vector3.right;
         }
     }
 }
